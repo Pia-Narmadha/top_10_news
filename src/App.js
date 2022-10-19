@@ -89,7 +89,7 @@ class App extends Component {
     if(i<this.state.sourceNames.length && i>=0)
     {
       console.log('changing source to '+this.state.sources[i]);
-      fetch("https://newsapi.org/v2/top-headlines?sources="+source+"&apiKey=e99ce0d4883744c3adb83ac34696003a")
+      fetch("https://newsapi.org/v2/top-headlines?sources="+source+"&apiKey=ed12c82e8848449ab32b67fd754bdccc")
       .then(
         (response)=>{
           return response.json();
