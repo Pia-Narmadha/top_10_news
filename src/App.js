@@ -86,7 +86,7 @@ class App extends Component {
     var source = this.state.sources[i];
     if (i < this.state.sourceNames.length && i >= 0) {
       console.log('changing source to ' + this.state.sources[i]);
-      let newsApiURL = "https://newsapi.org/v2/top-headlines?sources="+source+"&apiKey=ed12c82e8848449ab32b67fd754bdccc";
+      let newsApiURL = "https://newsapi22.org/v2/top-headlines?sources="+source+"&apiKey=ed12c82e8848449ab32b67fd754bdccc";
       // let newsApiURL = "http://localhost:8080/apis/news/" + source;
       fetch(newsApiURL)
         .then(
