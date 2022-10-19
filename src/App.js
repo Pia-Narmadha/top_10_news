@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import './App.css';
 
 class Card extends React.Component{
@@ -28,10 +28,14 @@ class Card extends React.Component{
 const NewsBoard = function (props){
   var arr =[];
   var i =0;
-    props.news.articles.forEach(news => {
-            arr.push(<Card news={news} key={i} />)
-            i++;
-        });
+  useEffect(()=>{
+    if(props.news && props.news.articles) {
+        props.news.articles.forEach(news => {
+        arr.push(<Card news={news} key={i} />)
+        i++;
+      });
+    }
+  }, [props.news])
   return(
       <div className ="container">
         {arr}
